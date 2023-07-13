@@ -1,5 +1,5 @@
 from flask import Flask
-from app.routes import home, profile
+from app.routes import home, profile, api
 
 def create_app(test_config=None):
   # set up app config
@@ -15,6 +15,7 @@ def create_app(test_config=None):
 
   # register routes
   app.register_blueprint(home)
+  app.register_blueprint(api)
 
   return app
 
