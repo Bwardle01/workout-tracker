@@ -1,6 +1,6 @@
 import sys
 from flask import Blueprint, request, jsonify, session
-from app.models import User
+from app.models import User, Exercise, Workout, ExerciseStats
 from app.db import get_db
 # from app.utils.auth import login_required this is a util
 
