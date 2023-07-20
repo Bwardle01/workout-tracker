@@ -4,29 +4,31 @@
 
 		<ul class="card-list-top" style="list-style-type: none; margin: 0; padding: 0; display:flex; width: 445px;height: 30px; border-bottom: 1px solid #000;">
 			<li class="card-date" style="margin-right: 15px; display: inline-block">
-				<input type="text" placeholder="Date"  style=" width: 5rem; text-align: center" style="width: 15rem" />
+				<input type="text" id="dateInput" placeholder="Date"  style=" width: 5rem; text-align: center" style="width: 15rem" />
 			</li>
       <li class="card-name" style="margin-right: 10px; display: inline-block">
-        <input type="text" placeholder="Workout name" style="width: 15rem; text-align: center"/>
+        <input type="text" id="workoutNameInput" placeholder="Workout name" style="width: 15rem; text-align: center"/>
       </li>
       <li class="card-reps" style="margin-left: 20px; display: inline-block">
-				<button href="#" style="width: 5rem; text-align: center; border: none; outline: none; padding: 2px 4px; box-shadow: 0 0 0 2px #000;" class="btn btn-primary1">Save</button>
+				<button href="#" style="width: 5rem; text-align: center; border: none; outline: none; padding: 2px 4px; box-shadow: 0 0 0 2px #000;" id="saveButton" class="btn btn-primary1">Save</button>
 			</li>
 			
 		</ul>
 		<ul class="card-list-mid" style="list-style-type: none; margin: 0; padding: 0; display:flex; height: 31px;">
 			<li class="card-exercise" style="margin-right: 15px; display: inline-block">
-				<input type="text" placeholder="Exercise" style="width: 15rem; text-align: center" />
+				<input type="text" id="exerciseInput" placeholder="Exercise" style="width: 15rem; text-align: center" />
 			</li>
       <li class="card-weight" style="margin-right: 10px; display: inline-block">
-        <input type="text" placeholder="Weight" style=" width: 5rem; text-align: center"/>
+        <input type="text" id="weightInput"placeholder="Weight" style=" width: 5rem; text-align: center"/>
       </li>
       <li class="card-reps" style="margin-left: 20px; display: inline-block">
-        <input type="text" placeholder="Reps" style="width: 5rem; text-align: center"/>
+        <input type="text" id="repsInput" placeholder="Reps" style="width: 5rem; text-align: center"/>
       </li>
 		</ul>
 
 		<button href="#"  class="btn btn-primary2" style="width: 442px;text-align: center;border: none;outline: none;padding: 2px 4px;box-shadow: 0 0 0 2px #000;margin-top: 60px;">Add Exercise</button>
 	</div>
 </div>
+
+<script src="/javascript/save.js"></script>
 {% endblock %}

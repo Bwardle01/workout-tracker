@@ -64,3 +64,53 @@ def login():
   session['loggedIn'] = True
 
   return jsonify(id = user.id)
+
+# save data route
+@bp.route('/save', methods=['POST'])
+def save_workout_dats():
+    data = request.get_json()
+    workout_data = data.get('data',{})
+    print('Received data:', data)
+    db = get_db()
+
+    try:
+        # Get user_id from the session if logged in
+        user_id = session.get('user_id')
+        if user_id:
+            user = db.query(User).get(user_id)
+            if not user:
+                return jsonify(message='User not found'), 404
+        else:
+            return jsonify(message='User not logged in'), 401
+
+        workout_name = data.get('workoutName')
+        workout_date = data.get('date')
+        exercises_data = [workout_data]
+
+        # Create a new workout for the user
+        new_workout = Workout(name=workout_name, date=workout_date, user=user)
+        db.add(new_workout)
+        db.commit()
+
+        # Add exercises and their stats to the workout
+        for exercise_data in exercises_data:
+            exercise_name = exercise_data.get('exerciseName')
+            weight = exercise_data.get('weight')
+            reps = exercise_data.get('reps')
+
+            print('Exercise:', exercise_name, 'Weight:', weight, 'Reps:', reps)
+
+
+            exercise = Exercise(name=exercise_name, workout=new_workout)
+            db.add(exercise)
+            db.commit()
+
+            stats = ExerciseStats(weight=weight, reps=reps, exercise=exercise)
+            db.add(stats)
+            db.commit()
+
+        return jsonify(message='Data saved successfully')
+    except Exception as e:
+        print(sys.exc_info()[0])
+        db.rollback()
+        return jsonify(error='Failed to save data: {}'.format(str(e))), 500

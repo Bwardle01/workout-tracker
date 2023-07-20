@@ -6,7 +6,7 @@ from sqlalchemy.orm import relationship
 class Workout(Base):
     __tablename__ = 'workouts'
     id = Column(Integer, primary_key=True)
-    name = Column(String(100), nullable=False)
+    workoutName = Column(String(100), nullable=False)
     date = Column(String(10), nullable=False)
 
     user_id = Column(Integer, ForeignKey('users.id'))
