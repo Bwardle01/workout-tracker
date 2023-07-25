@@ -16,19 +16,19 @@ db.add_all([
 db.commit()
 
 db.add_all([
-  Workout(name='Upper', date='01/01/01' ),
+  Workout(workoutName='Upper', date=1234, user_id=1 ),
 ])
 
 db.commit()
 
 db.add_all([
-  Exercise(name='Db curl'),
+  Exercise(exerciseName='Db curl', workout_id=1),
 ])
 
 db.commit()
 
 db.add_all([
-  ExerciseStats(weight='35', reps='15'),
+  ExerciseStats(weight='35', reps='15', exercise_id=1 ),
 ])
 
 db.commit()

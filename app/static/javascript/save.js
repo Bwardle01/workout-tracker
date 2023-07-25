@@ -13,8 +13,8 @@ async function saveWorkout() {
   const reps = document.getElementById("repsInput").value;
 
   const data = {
-    date: date,
     workoutName: workoutName,
+    date: date,
     exerciseName: exerciseName,
     weight: weight,
     reps: reps,
@@ -23,16 +23,16 @@ async function saveWorkout() {
   if (data) {
     const response = await fetch("/api/save", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
       body: JSON.stringify({
         data
       }),
+      headers: {
+        "Content-Type": "application/json",
+      },
     });
 
     if (response.ok) {
-      document.location.reload();
+      document.location.reload('/');
     } else{
       alert(response.statustext);
     }
