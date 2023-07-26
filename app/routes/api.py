@@ -87,6 +87,7 @@ def save_workout_data():
         # if any field is not filled in.
         if workout_name is None or date is None or exercise_name is None or weight is None or reps is None:
             return jsonify(message='Missing required data'), 400
+            
         # if a user is logged in.
         user_id = session.get('user_id')
         if not user_id:
