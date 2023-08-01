@@ -1,36 +1,153 @@
 {% extends "layout/main.html" %} {% block body %}
-<div class="card" style="width: 30rem; height: 20rem; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-	<div class="card-body" style="display: grid !important;">
-
-		<ul class="card-list-top" style="list-style-type: none; margin: 0; padding: 0; display:flex; width: 445px;height: 30px; border-bottom: 1px solid #000;">
+<div
+	class="card"
+	style="
+		width: 30rem;
+		height: 20rem;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	"
+>
+	<div class="card-body" style="display: grid !important">
+		<ul
+			class="card-list-top"
+			style="
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				width: 445px;
+				height: 30px;
+				border-bottom: 1px solid #000;
+			"
+		>
 			<li class="card-date" style="margin-right: 15px; display: inline-block">
-				<input type="text" id="dateInput" placeholder="Date"  style=" width: 5rem; text-align: center" style="width: 15rem" />
+				<input
+					type="text"
+					id="dateInput"
+					placeholder="Date"
+					style="width: 5rem; text-align: center"
+					style="width: 15rem"
+				/>
 			</li>
-      <li class="card-name" style="margin-right: 10px; display: inline-block">
-        <input type="text" id="workoutNameInput" placeholder="Workout name" style="width: 15rem; text-align: center"/>
-      </li>
-      <li class="card-reps" style="margin-left: 20px; display: inline-block">
-				<button href="#" style="width: 5rem; text-align: center; border: none; outline: none; padding: 2px 4px; box-shadow: 0 0 0 2px #000;" id="saveButton" class="btn btn-primary1">Save</button>
+			<li class="card-name" style="margin-right: 10px; display: inline-block">
+				<input
+					type="text"
+					id="workoutNameInput"
+					placeholder="Workout name"
+					style="width: 15rem; text-align: center"
+				/>
 			</li>
-			
+			<li class="card-save" style="margin-left: 20px; display: inline-block">
+				<button
+					href="#"
+					style="
+						width: 5rem;
+						text-align: center;
+						border: none;
+						outline: none;
+						padding: 2px 4px;
+						box-shadow: 0 0 0 2px #000;
+					"
+					id="saveButton"
+					class="btn btn-primary1"
+				>
+					Save
+				</button>
+			</li>
 		</ul>
-		<ul id="exercise-list" class="card-list-mid" style="list-style-type: none; margin: 0; padding: 0; display:flex; height: 31px;">
-			<li class="card-exercise" style="margin-right: 15px; display: inline-block">
-				<input type="text" id="exerciseInput" placeholder="Exercise" style="width: 15rem; text-align: center" />
-			</li>
-      <li class="card-weight" id="card-weight-box"style="margin-right: 10px; display: inline-block">
-        <input type="text" id="weightInput"placeholder="Weight" style=" width: 5rem; text-align: center"/>
-      </li>
-      <li class="card-reps" id="card-reps-box"style="margin-left: 20px; display: inline-block">
-        <input type="text" id="repsInput" placeholder="Reps" style="width: 5rem; text-align: center"/>
-      </li>
-		
-		</ul>
-
-		<button id="addSet" class="card-addSet" style="margin-left: auto; margin-right: 78px; height: 35px; display: inline-block; width: 35px; text-align: center; "> +
+		<div>
+			<ul
+				id="exercise-list"
+				class="card-list-mid"
+				style="
+					list-style-type: none;
+					margin: 0;
+					padding: 0;
+					display: flex;
+					height: 31px;
+					flex-wrap: wrap;
+					justify-content: flex-end;
+				"
+			>
+				<li
+					class="card-exercise"
+					style="margin-right: 15px; display: inline-block"
+				>
+					<input
+						type="text"
+						id="exerciseInput"
+						placeholder="Exercise"
+						style="width: 15rem; text-align: center"
+					/>
+				</li>
+				<li
+					class="card-weight"
+					id="card-weight-box"
+					style="margin-right: 10px; display: block"
+				>
+					<input
+						type="text"
+						id="weightInput"
+						placeholder="Weight"
+						style="width: 5rem; text-align: center"
+					/>
+				</li>
+				<li
+					class="card-reps"
+					id="card-reps-box"
+					style="margin-left: 20px; display: block"
+				>
+					<input
+						type="text"
+						id="repsInput"
+						placeholder="Reps"
+						style="width: 5rem; text-align: center"
+					/>
+				</li>
+				<li style="display: block">
+					<button
+						id="addSet"
+						class="card-addSet"
+						style="height: 35px; display: flex; width: 35px; text-align: center; margin-right: 78px;"
+					>
+						+
+					</button>
+				</li>
+			</ul>
+		</div>
+		<!-- <button
+			id="addSet"
+			class="card-addSet"
+			style="
+				margin-left: auto;
+				margin-right: 78px;
+				height: 35px;
+				display: inline-block;
+				width: 35px;
+				text-align: center;
+			"
+		>
+			+
+		</button> -->
+		<button
+			href="#"
+			class="btn btn-primary2"
+			style="
+				width: 442px;
+				text-align: center;
+				border: none;
+				outline: none;
+				padding: 2px 4px;
+				box-shadow: 0 0 0 2px #000;
+				margin-top: 60px;
+			"
+		>
+			Add Exercise
 		</button>
-		<button href="#"  class="btn btn-primary2" style="width: 442px;text-align: center;border: none;outline: none;padding: 2px 4px;box-shadow: 0 0 0 2px #000;margin-top: 60px;">Add Exercise</button>
-		
+
 		<!-- on click of add exercise it adds another button to add set.  -->
 		<!-- idk where its going to go but add button to add a new set of weight and reps. For each exercise there is a add set button. -->
 	</div>

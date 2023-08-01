@@ -9,7 +9,7 @@ function addSet () {
   const newWeightElement = weightElement.cloneNode(true);
   const newRepsElement = repsElement.cloneNode(true);
 
-  // Reset input values in the cloned elements
+  // Reset values on click
   newWeightElement.querySelector('input').value = '';
   newRepsElement.querySelector('input').value = '';
 
