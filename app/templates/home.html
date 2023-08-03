@@ -68,50 +68,44 @@
 					padding: 0;
 					display: flex;
 					height: 31px;
-					flex-wrap: wrap;
-					justify-content: flex-end;
+					flex-wrap: nowrap;
+					flex-direction: column;
 				"
 			>
-				<li
-					class="card-exercise"
-					style="margin-right: 15px; display: inline-block"
-				>
-					<input
-						type="text"
-						id="exerciseInput"
-						placeholder="Exercise"
-						style="width: 15rem; text-align: center"
-					/>
-				</li>
-				<li
-					class="card-weight"
-					id="card-weight-box"
-					style="margin-right: 10px; display: block"
-				>
-					<input
-						type="text"
-						id="weightInput"
-						placeholder="Weight"
-						style="width: 5rem; text-align: center"
-					/>
-				</li>
-				<li
-					class="card-reps"
-					id="card-reps-box"
-					style="margin-left: 20px; display: block"
-				>
-					<input
-						type="text"
-						id="repsInput"
-						placeholder="Reps"
-						style="width: 5rem; text-align: center"
-					/>
+				<li class="card-exercise" style="display: flex">
+					<div class="exercise-container">
+						<input
+							type="text"
+							id="exerciseInput"
+							placeholder="Exercise"
+							style="width: 15rem; text-align: center"
+						/>
+					</div>
+					<div
+						class="weight-reps-container"
+						style="display: flex; margin-left: 1rem"
+					>
+						<input
+							type="text"
+							id="weightInput"
+							placeholder="Weight"
+							style="width: 5rem; text-align: center"
+						/>
+						<div style="display: flex">
+							<input
+								type="text"
+								id="repsInput"
+								placeholder="Reps"
+								style="width: 5rem; text-align: center; margin-left: 26px"
+							/>
+						</div>
+					</div>
 				</li>
 				<li style="display: block">
 					<button
 						id="addSet"
 						class="card-addSet"
-						style="height: 35px; display: flex; width: 35px; text-align: center; margin-right: 78px;"
+						style="height: 35px; display: flex; width: 35px; text-align: center"
 					>
 						+
 					</button>
