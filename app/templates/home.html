@@ -73,7 +73,7 @@
 				"
 			>
 				<li class="card-exercise" style="display: flex">
-					<div class="exercise-container">
+					<div class="exercise-container" style="display: inline-block">
 						<input
 							type="text"
 							id="exerciseInput"
@@ -83,7 +83,11 @@
 					</div>
 					<div
 						class="weight-reps-container"
-						style="display: flex; margin-left: 1rem"
+						style="
+							display: flex;
+							flex-wrap: wrap;
+							margin-left: 1rem;
+						"
 					>
 						<input
 							type="text"
@@ -91,21 +95,28 @@
 							placeholder="Weight"
 							style="width: 5rem; text-align: center"
 						/>
-						<div style="display: flex">
-							<input
-								type="text"
-								id="repsInput"
-								placeholder="Reps"
-								style="width: 5rem; text-align: center; margin-left: 26px"
-							/>
-						</div>
+
+						<input
+							type="text"
+							id="repsInput"
+							placeholder="Reps"
+							style="width: 5rem; text-align: center; margin-left: 26px"
+						/>
 					</div>
 				</li>
 				<li style="display: block">
 					<button
 						id="addSet"
 						class="card-addSet"
-						style="height: 35px; display: flex; width: 35px; text-align: center"
+						style="
+							height: 35px;
+							display: flex;
+							width: 35px;
+							text-align: center;
+							margin-left: auto;
+							margin-right: 80px;
+							margin-top: 10px;
+						"
 					>
 						+
 					</button>
