@@ -83,11 +83,7 @@
 					</div>
 					<div
 						class="weight-reps-container"
-						style="
-							display: flex;
-							flex-wrap: wrap;
-							margin-left: 1rem;
-						"
+						style="display: flex; flex-wrap: wrap; margin-left: 1rem"
 					>
 						<input
 							type="text"
@@ -105,6 +101,7 @@
 					</div>
 				</li>
 				<li style="display: block">
+					<div class='add-set-container'>
 					<button
 						id="addSet"
 						class="card-addSet"
@@ -120,25 +117,14 @@
 					>
 						+
 					</button>
+				</div>
 				</li>
 			</ul>
 		</div>
-		<!-- <button
-			id="addSet"
-			class="card-addSet"
-			style="
-				margin-left: auto;
-				margin-right: 78px;
-				height: 35px;
-				display: inline-block;
-				width: 35px;
-				text-align: center;
-			"
-		>
-			+
-		</button> -->
+
 		<button
 			href="#"
+			id="addExercise"
 			class="btn btn-primary2"
 			style="
 				width: 442px;
@@ -148,6 +134,7 @@
 				padding: 2px 4px;
 				box-shadow: 0 0 0 2px #000;
 				margin-top: 60px;
+				
 			"
 		>
 			Add Exercise
@@ -162,4 +149,5 @@
 <!-- for each exercise a add set button appears -->
 <script src="/javascript/save.js"></script>
 <script src="/javascript/addSet.js"></script>
+<script src="/javascript/addExercise.js"></script>
 {% endblock %}
