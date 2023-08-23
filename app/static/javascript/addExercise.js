@@ -1,30 +1,22 @@
 // When a user clicks add exercise, a new exercise field will be populated along with weight and reps.
 // When a new exercise is populated a + button is also added to add a new set.
 
+// When user clicks + button a new set of weight and reps are populated.
+// when button click a new set of LI is populated of input fields.
 
 
 // this funciton works but the style on the containers arent working. Need to figure out how to target the container for the syle.
 function addExercise() { 
   const exerciseList = document.getElementById("exercise-list");
+  const cardExercise = document.querySelector(".card-exercise")
 
-	const weightElement = document.getElementById("weightInput");
-	const repsElement = document.getElementById("repsInput");
-  const exerciseElement = document.getElementById("exerciseInput");
-  const setElement = document.getElementById("addSet")
-
-	const newWeightElement = weightElement.cloneNode(true);
-	const newRepsElement = repsElement.cloneNode(true);
-  const newExerciseElement = exerciseElement.cloneNode(true);
+  const setElement = document.querySelector(".add-set-button");
+ 
+  const newCardExercise = cardExercise.cloneNode(true);
   const newSetElement = setElement.cloneNode(true);
 
-  newWeightElement.value = "";
-	newRepsElement.value = "";
-  newExerciseElement.value = "";
 
- 
-	exerciseList.appendChild(newWeightElement);
-	exerciseList.appendChild(newRepsElement);
-  exerciseList.appendChild(newExerciseElement);
+  exerciseList.appendChild(newCardExercise);
   exerciseList.appendChild(newSetElement);
 };
 
@@ -61,5 +53,3 @@ document.getElementById('addExercise').onclick = addExercise;
 
 
 
-// When user clicks + button a new set of weight and reps are populated.
-// when button click a new set of LI is populated of input fields.
